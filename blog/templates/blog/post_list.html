@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django blog 2020</title>
+</head>
+<body>
+<div>
+    <h2><a href="">Najnowsze wpisy:</a></h2>
+</div>
+
+{% for post in posts %}
+<div>
+    <p>Data publikacji: {{ post.published_date}}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
+</body>
+</html>
